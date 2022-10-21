@@ -12,8 +12,8 @@ namespace Editor_of_Authors_and_Books
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string MiddleName { get; set; }
-
         public DateTime Birthday { get; set; }
+        //public List<int> BooksList { get; set; }
 
         public Author(string firstName, string lastName, string middleName, DateTime birthday)
         {
