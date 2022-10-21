@@ -23,6 +23,9 @@ namespace Editor_of_Authors_and_Books
         public MainWindow()
         {
             InitializeComponent();
+            Service service = new Service();
+            service.Start();
+
         }
     }
 }
