@@ -14,7 +14,6 @@ namespace Editor_of_Authors_and_Books
 
         public int YearOfIssue { get; set; }
 
-        public List<int> AuthorsList { get; set; }
 
         public Book(string name, int yearOfIssue)
         {

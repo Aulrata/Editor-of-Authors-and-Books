@@ -65,9 +65,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddAuthorWindow.xaml.cs">
+      <DependentUpon>AddAuthorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Book.cs" />
     <Compile Include="BookContext.cs" />
+    <Compile Include="ConnectBookAndAuthor.cs" />
+    <Compile Include="ConnectBookAndAuthorContext.cs" />
     <Compile Include="Service.cs" />
+    <Page Include="AddAuthorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

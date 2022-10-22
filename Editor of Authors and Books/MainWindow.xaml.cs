@@ -25,7 +25,15 @@ namespace Editor_of_Authors_and_Books
             InitializeComponent();
             Service service = new Service();
             service.Start();
+            Author author = new Author();
+            lvBooks.ItemsSource =  service.ShowBooks().Local;
+            lvAuthors.ItemsSource = service.ShowAuthors().Local;
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new AddAuthorWindow().ShowDialog();
+            lvAuthors.Items.Refresh();
         }
     }
 }
