@@ -15,32 +15,30 @@ using System.Windows.Shapes;
 namespace Editor_of_Authors_and_Books
 {
     /// <summary>
-    /// Логика взаимодействия для AddAuthorWindow.xaml
+    /// Логика взаимодействия для AddBookWindow.xaml
     /// </summary>
-    public partial class AddAuthorWindow : Window
+    public partial class AddBookWindow : Window
     {
         readonly private Service _service;
-        public AddAuthorWindow()
+
+        public AddBookWindow()
         {
             InitializeComponent();
             _service = new Service();
         }
 
-        private void AddAuthorButton(object sender, RoutedEventArgs e)
+        private void AddBookButton(object sender, RoutedEventArgs e)
         {
             try
             {
-                if (String.IsNullOrWhiteSpace(LastName.Text))
+                if (String.IsNullOrWhiteSpace(Name.Text))
                     return;
-                if (String.IsNullOrWhiteSpace(FirstName.Text))
-                    return;
-                if (String.IsNullOrWhiteSpace(MiddleName.Text))
-                    return;
-                if (String.IsNullOrWhiteSpace(Birthday.Text))
+                if (String.IsNullOrWhiteSpace(YearOfIssue.Text))
                     return;
 
-                _service.AddAuthor(LastName.Text, FirstName.Text, MiddleName.Text, Birthday.Text);
+                _service.AddBook(Name.Text, int.Parse(YearOfIssue.Text));
                 Close();
+
             }
             catch (Exception ex)
             {

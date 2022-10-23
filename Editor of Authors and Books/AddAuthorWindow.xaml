@@ -9,16 +9,16 @@
     <Grid>
 
         <TextBlock HorizontalAlignment="Left" Margin="356,46,0,0" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top"/>
-        <TextBox x:Name="LastName"  HorizontalAlignment="Left" Margin="321,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="LastName"  HorizontalAlignment="Left" Margin="321,67,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" AutomationProperties.HelpText="01.01.2000"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="369,108,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top"/>
-        <TextBox x:Name="FirstName"  HorizontalAlignment="Left" Margin="321,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="FirstName"  HorizontalAlignment="Left" Margin="321,129,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
 
         <TextBlock  HorizontalAlignment="Left" Margin="352,165,0,0" TextWrapping="Wrap" Text="Отчество" VerticalAlignment="Top"/>
-        <TextBox x:Name="MiddleName" HorizontalAlignment="Left" Margin="321,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="MiddleName" HorizontalAlignment="Left" Margin="321,186,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
 
-        <TextBlock  HorizontalAlignment="Left" Margin="338,233,0,0" TextWrapping="Wrap" Text="Дата рождения" VerticalAlignment="Top"/>
-        <TextBox x:Name="Birthday" HorizontalAlignment="Left" Margin="321,254,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock  HorizontalAlignment="Left" Margin="300,233,0,0" TextWrapping="Wrap" Text="Дата рождения (ДД.ММ.ГГГГ)" VerticalAlignment="Top"/>
+        <TextBox x:Name="Birthday" HorizontalAlignment="Left" Margin="321,254,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
 
         <Button Content="Добавить автора" HorizontalAlignment="Left" Margin="327,302,0,0" VerticalAlignment="Top" Height="35" Width="100" Click="AddAuthorButton"/>
 

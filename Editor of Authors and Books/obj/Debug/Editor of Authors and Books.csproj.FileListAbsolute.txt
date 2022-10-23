@@ -21,3 +21,5 @@ C:\D\Programming\C#\Editor of Authors and Books\Editor of Authors and Books\obj\
 C:\D\Programming\C#\Editor of Authors and Books\Editor of Authors and Books\obj\Debug\Editor of Authors and Books.pdb
 C:\D\Programming\C#\Editor of Authors and Books\Editor of Authors and Books\obj\Debug\AddAuthorWindow.g.cs
 C:\D\Programming\C#\Editor of Authors and Books\Editor of Authors and Books\obj\Debug\AddAuthorWindow.baml
+C:\D\Programming\C#\Editor of Authors and Books\Editor of Authors and Books\obj\Debug\AddBookWindow.g.cs
+C:\D\Programming\C#\Editor of Authors and Books\Editor of Authors and Books\obj\Debug\AddBookWindow.baml

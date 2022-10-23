@@ -25,18 +25,45 @@ namespace Editor_of_Authors_and_Books
         {
             InitializeComponent();
             _service = new Service();
-            lvBooks.ItemsSource =  _service.ShowBooks().ToList();
-            lvAuthors.ItemsSource = _service.ShowAuthors().ToList();
+            RefreshBooksTable();
+            RefreshAuthorsTable();
         }
 
         private void AddAuthorButton_Click(object sender, RoutedEventArgs e)
         {
             new AddAuthorWindow().ShowDialog();
-            lvAuthors.ItemsSource = _service.ShowAuthors().ToList();
+            RefreshAuthorsTable();
         }
 
         private void AddBookButton_Click(object sender, RoutedEventArgs eventArgs)
         {
+            new AddBookWindow().ShowDialog();
+            RefreshBooksTable();
+        }
+
+        private void RefreshAuthorsTable()
+        {
+            lvAuthors.ItemsSource = _service.ShowAuthors().ToList();
+        }
+
+        private void RefreshBooksTable()
+        {
+            lvBooks.ItemsSource = _service.ShowBooks().ToList();
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (lvBooks.SelectedItem != null)
+            {
+                _service.RemoveBook((lvBooks.SelectedItem as Book).BookID);
+                RefreshBooksTable();
+            }
+            else if (lvAuthors.SelectedItem != null)
+            {
+                _service.RemoveAuthor((lvAuthors.SelectedItem as Author).AuthorID);
+                RefreshAuthorsTable();
+            }
+
 
         }
     }

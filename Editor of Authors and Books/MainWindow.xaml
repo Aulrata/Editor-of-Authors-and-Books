@@ -9,25 +9,26 @@
     <Grid>
 
 
-        <Button Content="Добавить книгу" HorizontalAlignment="Left" Margin="537,368,0,0" VerticalAlignment="Top" Height="34" Width="100" Click="AddBookButton_Click"/>
+        <Button Content="Добавить книгу" HorizontalAlignment="Left" Margin="535,373,0,0" VerticalAlignment="Top" Height="34" Width="100" Click="AddBookButton_Click"/>
         <Button Content="Добавить автора" HorizontalAlignment="Left" Margin="53,373,0,0" VerticalAlignment="Top" Height="34" Width="100" Click="AddAuthorButton_Click"/>
         <Button Content="Изменить книгу" HorizontalAlignment="Left" Margin="672,373,0,0" VerticalAlignment="Top" Height="34" Width="100" />
         <Button Content="Изменить автора" HorizontalAlignment="Left" Margin="247,373,0,0" VerticalAlignment="Top" Height="34" Width="100" />
-        <Button Content="Удалить" HorizontalAlignment="Left" Margin="407,373,0,0" VerticalAlignment="Top" Height="34" Width="66"   />
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="407,373,0,0" VerticalAlignment="Top" Height="34" Width="66" Click="DeleteButton_Click"/>
 
 
         <Label Content="Books" HorizontalAlignment="Left" VerticalAlignment="Top" Width="44" Height="26" Margin="632,0,0,0"/>
         <ListView x:Name="lvBooks" Margin="517,26,10,87" >
             <ListView.View>
                 <GridView>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding BookID}" />
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" />
                     <GridViewColumn Header="Year of issue" DisplayMemberBinding="{Binding YearOfIssue}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        
-        
-        
+
+
+
         <Label Content="Authors" HorizontalAlignment="Left" VerticalAlignment="Top" Width="54" Margin="178,-1,0,0" Height="26"/>
         <ListView x:Name="lvAuthors" HorizontalAlignment="Left" Width="390" Margin="10,25,0,87" >
             <ListView.View>
