@@ -20,20 +20,24 @@ namespace Editor_of_Authors_and_Books
     /// </summary>
     public partial class MainWindow : Window
     {
+        Service _service;
         public MainWindow()
         {
             InitializeComponent();
-            Service service = new Service();
-            service.Start();
-            Author author = new Author();
-            lvBooks.ItemsSource =  service.ShowBooks().Local;
-            lvAuthors.ItemsSource = service.ShowAuthors().Local;
+            _service = new Service();
+            lvBooks.ItemsSource =  _service.ShowBooks().ToList();
+            lvAuthors.ItemsSource = _service.ShowAuthors().ToList();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AddAuthorButton_Click(object sender, RoutedEventArgs e)
         {
             new AddAuthorWindow().ShowDialog();
-            lvAuthors.Items.Refresh();
+            lvAuthors.ItemsSource = _service.ShowAuthors().ToList();
+        }
+
+        private void AddBookButton_Click(object sender, RoutedEventArgs eventArgs)
+        {
+
         }
     }
 }

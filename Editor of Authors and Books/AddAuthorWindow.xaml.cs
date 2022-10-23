@@ -19,11 +19,26 @@ namespace Editor_of_Authors_and_Books
     /// </summary>
     public partial class AddAuthorWindow : Window
     {
+        readonly private Service service;
         public AddAuthorWindow()
         {
             InitializeComponent();
-
+            service = new Service();
         }
 
+        private void AddAuthorButton(object sender, RoutedEventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(LastName.Text))
+                return;
+            if (String.IsNullOrWhiteSpace(FirstName.Text))
+                return;
+            if (String.IsNullOrWhiteSpace(MiddleName.Text))
+                return;
+            if (String.IsNullOrWhiteSpace(Birthday.Text))
+                return;
+
+            service.AddAuthor(LastName.Text, FirstName.Text, MiddleName.Text, Birthday.Text);
+            this.Close();
+        }
     }
 }
